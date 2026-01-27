@@ -6,10 +6,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
-    <title>Document</title>
+    <title>CloudBudget</title>
 </head>
 <body>
+    <ul id="slide-out" class="sidenav">
+        <li><a href="#video">ОБЗОР</a></li>
+        <li><a href="#overview">ОСОБЕННОСТИ</a></li>
+        <li><a href="#features">ТЕХНОЛОГИЯ</a></li>
+        <li><a href="#contact_us">КОНТАКТЫ</a></li>
+        <div class="header__nav__btn">
+                    <button class="header__nav_btn">Вход</button>
+        </div>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="sidenav-close" href="#!"><i class="material-icons">close</i>Close</a></a></li>
+    </ul>
     <header class="header">
         <div class="container">
             <div class="header__nav">
@@ -17,12 +31,13 @@
                     <img src="/img/cloud.svg" alt="icon">
                     <h5 class="header__nav_logo-h5">CloudBudget</h5>
                 </div>
+                <a href="#" data-target="slide-out" class="sidenav-trigger nav-btn"><i class="material-icons">menu</i></a>
                 <ul class="header__nav_ul">
-                    <li>ОБЗОР</li>
-                    <li>ОСОБЕННОСТИ</li>
-                    <li>ТЕХНОЛОГИЯ</li>
-                    <li>КОНТАКТЫ</li>
-                    <li>ВОЙТИ</li>
+                    <li><a href="#video" class="header__nav_ul_a">ОБЗОР</a></li>
+                    <li><a href="#overview" class="header__nav_ul_a">ОСОБЕННОСТИ</a></li>
+                    <li><a href="#features" class="header__nav_ul_a">ТЕХНОЛОГИЯ</a></li>
+                    <li><a href="#contact_us" class="header__nav_ul_a">КОНТАКТЫ</a></li>
+                    <li><a href="#" class="header__nav_ul_a">ВОЙТИ</a></li>
                 </ul>
                 <button class="header__nav_btn">Вход</button>
             </div>
@@ -33,17 +48,19 @@
             </div>
         </div>
     </header>
-    <section class="video">
-        <div class="video__flex">
-            <div class="video__flex_title">
-                <h2 class="text-h2 video_h2">Простое приложение для управления бюджетом</h2>
-                <p class="text-p video_p">Наше приложение создано, чтобы вы могли в реальном времени управлять своим бюджетом и расходами в режиме онлайн с любого устройства. Оно предоставляет подробные отчеты о доходах и расходах с графиками, чтобы вы сразу могли увидеть расходы и бюджет. Читайте ниже, чтобы узнать больше.</p>
-                <p class="text-p video_more">Узнать подробнее</p>
+    <section class="video" id="video">
+        <div class="container">
+            <div class="video__flex">
+                <div class="video__flex_title">
+                    <h2 class="text-h2 video_h2">Простое приложение для управления бюджетом</h2>
+                    <p class="text-p video_p">Наше приложение создано, чтобы вы могли в реальном времени управлять своим бюджетом и расходами в режиме онлайн с любого устройства. Оно предоставляет подробные отчеты о доходах и расходах с графиками, чтобы вы сразу могли увидеть расходы и бюджет. Читайте ниже, чтобы узнать больше.</p>
+                    <p class="text-p video_more">Узнать подробнее</p>
+                </div>
+                <img src="/img/Video_bg.png" alt="" class="video__flex_img">
             </div>
-            <img src="/img/Video_bg.png" alt="" class="video__flex_img"> 
         </div>
     </section>
-    <section class="overview">
+    <section class="overview" id="overview">
         <div class="container">
             <h2 class="text-h2 qverview_h2">Возможности</h2>
             <div class="overview__grid">
@@ -74,7 +91,7 @@
             </div>
         </div>
     </section>
-    <section class="features">
+    <section class="features" id="features">
         <div class="container">
             <h2 class="text-h2 features_h2">Технологии</h2>
             <div class="features__grid">
@@ -128,7 +145,7 @@
             </div>
         </div>
     </section>
-    <section class="contact_us">
+    <section class="contact_us" id="contact_us">
         <div class="container">
             <div class="contact_us_flex">
                 <div class="contact_us_flex_title">
@@ -150,5 +167,8 @@
             <div class="copyright">Copyright 2021 CloudBudget</div>
         </div>
     </footer>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
