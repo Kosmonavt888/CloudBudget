@@ -46,6 +46,7 @@ body {
     max-width: 1440px;
     width: 100%;
     height: 782px;
+    margin: 0 auto;
 }
 
 .header__nav {
@@ -116,8 +117,39 @@ body {
     text-align: center;
     text-transform: uppercase;
 }
+.header__nav_btn a{
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.header__nav_btn_mobile {
+    width: 100px;
+    height: 40px;
+    border: 1px solid var(--color-orange);
+    border-radius: 6px;
+    background: var(--color-orange);
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.header__nav_btn_mobile a{
+    color: rgba(255, 255, 255, 1);
+}
+.header__nav_btn_mobile:hover {
+    width: 110px;
+    color: #fff;
+    transition: ease;
+}
+
 .header__nav_btn:hover {
-    background:rgba(255, 255, 255, 1);;
+    background:rgba(255, 255, 255, 1);
     color: var(--color-orange);
     transition: ease;
 }
@@ -451,6 +483,42 @@ font-weight: 400;
 line-height: 14px;
 letter-spacing: 0%;
 text-align: left;
+}
+.modal{
+  border-radius: 6px;
+}
+.modal h4{
+  color: var(--color-pink);
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal_input {
+  display: block;
+  margin: 0 auto 20px;
+  width: 540px;
+  height: 60px;
+  border-radius: 6px;
+  display: block;
+  margin-bottom: 24px;
+  padding-left: 31px;
+}
+.modal p{
+  text-align: center;
+}
+.log_in_btn {
+  display: block;
+  margin: 10px auto 0;
+  width: 120px;
+  height: 40px;
+  background-color: var(--color-pink);
+  color: #fff;
+  border: var(--color-pink);
+  border-radius: 6px;
+}
+.modal-trigger{
+  text-decoration: none;
 }
 
 @media screen and (max-width:1024px) {
@@ -924,6 +992,210 @@ ul#slide-out:not(.browser-default)>li {
 #slide-out a {
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
+}
+/*Модальное окно*/
+.z-depth-5, .modal {
+  -webkit-box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+}
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #fafafa;
+  padding: 0;
+  max-height: 70%;
+  width: 55%;
+  margin: auto;
+  overflow-y: auto;
+  border-radius: 2px;
+  will-change: top, opacity;
+}
+
+.modal:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .modal {
+    width: 80%;
+  }
+}
+
+.modal h1, .modal h2, .modal h3, .modal h4 {
+  margin-top: 0;
+}
+
+.modal .modal-content {
+  padding: 24px;
+}
+
+.modal .modal-close {
+  cursor: pointer;
+}
+
+.modal .modal-footer {
+  border-radius: 0 0 2px 2px;
+  background-color: #fafafa;
+  padding: 4px 6px;
+  height: 56px;
+  width: 100%;
+  text-align: right;
+}
+
+.modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-small, .modal .modal-footer .btn-flat {
+  margin: 6px 0;
+}
+
+.modal-overlay {
+  position: fixed;
+  z-index: 999;
+  top: -25%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 125%;
+  width: 100%;
+  background: #000;
+  display: none;
+  will-change: opacity;
+}
+
+.modal.modal-fixed-footer {
+  padding: 0;
+  height: 70%;
+}
+
+.modal.modal-fixed-footer .modal-content {
+  position: absolute;
+  height: calc(100% - 56px);
+  max-height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.modal.modal-fixed-footer .modal-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 0;
+}
+
+.modal.bottom-sheet {
+  top: auto;
+  bottom: -100%;
+  margin: 0;
+  width: 100%;
+  max-height: 45%;
+  border-radius: 0;
+  will-change: bottom, opacity;
+}
+.datepicker-modal {
+  max-width: 325px;
+  min-width: 300px;
+  max-height: none;
+}
+
+.datepicker-container.modal-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+}
+@media only screen and (min-width: 601px) {
+  .datepicker-modal {
+    max-width: 625px;
+  }
+  .datepicker-container.modal-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .datepicker-date-display {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 270px;
+        -ms-flex: 0 1 270px;
+            flex: 0 1 270px;
+  }
+  .datepicker-controls,
+  .datepicker-table,
+  .datepicker-footer {
+    width: 320px;
+  }
+  .datepicker-day-button {
+    line-height: 44px;
+  }
+}
+
+/* Timepicker Containers */
+.timepicker-modal {
+  max-width: 325px;
+  max-height: none;
+}
+
+.timepicker-container.modal-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+}
+@media only screen and (min-width: 601px) {
+  .timepicker-modal {
+    max-width: 600px;
+  }
+  .timepicker-container.modal-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .timepicker-text-container {
+    top: 32%;
+  }
+  .timepicker-display-am-pm {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    text-align: center;
+    margin-top: 1.2rem;
+  }
+}
+.materialboxed {
+  display: block;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+  position: relative;
+  -webkit-transition: opacity .4s;
+  transition: opacity .4s;
+  -webkit-backface-visibility: hidden;
+}
+
+.materialboxed:hover:not(.active) {
+  opacity: .8;
+}
+
+.materialboxed.active {
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}
+.carousel.scrolling .carousel-item .materialboxed,
+.carousel .carousel-item:not(.active) .materialboxed {
+  pointer-events: none;
 }
 
 

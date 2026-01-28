@@ -17,7 +17,7 @@
         <li><a href="#features">ТЕХНОЛОГИЯ</a></li>
         <li><a href="#contact_us">КОНТАКТЫ</a></li>
         <div class="header__nav__btn">
-                    <button class="header__nav_btn">Вход</button>
+                    <button class="header__nav_btn_mobile"><a class="waves-effect waves-light modal-trigger" href="#modal1">Вход</a></button>
         </div>
         <li>
             <div class="divider"></div>
@@ -39,12 +39,13 @@
                     <li><a href="#contact_us" class="header__nav_ul_a">КОНТАКТЫ</a></li>
                     <li><a href="#" class="header__nav_ul_a">ВОЙТИ</a></li>
                 </ul>
-                <button class="header__nav_btn">Вход</button>
+                <!-- Modal Trigger -->
+  <button class="header__nav_btn"><a class="modal-trigger" href="#modal1">Вход</a></button>
             </div>
             <div class="header__title">
                 <h1 class="text-h1 header__title_h1">CloudBudget</h1>
                 <p class="header_p">Управление бюджетом в для всех. <span>Всего 69,95 € в месяц после 7-дневной</span> пробной версии за 4,99 €</p>
-                <button class="header__title_btn">ПОПРОБОВАТЬ</button>
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal1"><button class="header__title_btn">ПОПРОБОВАТЬ</button></a>
             </div>
         </div>
     </header>
@@ -155,7 +156,7 @@
                 <div class="contact_us_form">
                     <h5 class="text-h5">Имя</h5>
                     <input class="contact_input" placeholder="Телефон">
-                    <button class="contact_us_btn">Отправить</button>
+                    <a class="waves-effect waves-light btn modal-trigger" href="#modal2"><button class="contact_us_btn">Отправить</button></a>
                 </div>
             </div>
         </div>
@@ -167,6 +168,29 @@
             <div class="copyright">Copyright 2021 CloudBudget</div>
         </div>
     </footer>
+      
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Вход</h4>
+      <input type="text" class="modal_input" placeholder="Login">
+      <input type="text" class="modal_input" placeholder="Password">
+      <p>Нет аккаунта? Зарегистрируйтесь</p>
+      <button class="log_in_btn">Регистрация</button>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Закрыть</a>
+    </div>
+  </div>
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h4>Спасибо за обращение!Наша служба поддержки свяжется с вами.</h4>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Закрыть</a>
+    </div>
+  </div>
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
